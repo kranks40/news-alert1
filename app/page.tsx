@@ -1,8 +1,12 @@
+import { categories } from "../constants"
+import fetchNews from "../lib/fetchNews"
 
 
-const Homepage = async () => {
+const Homepage =  () => {
   //fetch news data
-  const
+  const news: NewsResponse =  fetchNews(categories.join(','))
+
+  console.log(news)
   return (
     <div>
       {/* NewsList */}
